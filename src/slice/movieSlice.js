@@ -54,6 +54,7 @@ const movieSlice = createSlice({
             state.Credits = action.payload
         },
         SetSimilar:(state,action)=>{
+            
             state.Similar = action.payload
         },
         SetRecomend:(state,action)=>{
