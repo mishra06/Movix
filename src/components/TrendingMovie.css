@@ -1,0 +1,18 @@
+.card_first_div{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.Card_second_div{
+    display: flex;
+   gap: 1rem;
+    flex-wrap: wrap;
+    
+    
+    gap: 1rem;
+}
