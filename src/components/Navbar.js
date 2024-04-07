@@ -16,7 +16,7 @@ const Navbar = () => {
                 aria-expanded="false"
               >
                 <span className="absolute -inset-0.5"></span>
-                <span className="sr-only">Open main menu</span>
+                <span className="sr-only"></span>
 
                 <svg
                   className="block h-6 w-6"
@@ -83,18 +83,18 @@ const Navbar = () => {
         <div className="sm:hidden" id="mobile-menu">
           <div className="space-y-1 px-2 pb-3 pt-2">
             <NavLink
-              to="/"
+              to="/movies"
               className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
               aria-current="page"
             >
-              movie
+              Movie
             </NavLink>
             <NavLink
-              to="/"
+              to="/tv-show"
               className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
               aria-current="page"
             >
-              movie
+              Tv-Show
             </NavLink>
           </div>
         </div>

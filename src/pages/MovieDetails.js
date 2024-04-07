@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { SetDetails, SetCredits } from "../slice/movieSlice";
 import { fetchApi } from "../utils/api";
-import { CircularProgressbar } from "react-circular-progressbar";
+import { CircularProgressbar,buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import "./MovieDetails.css";
 import SimilarMovies from "../components/SimilarMovies";
@@ -103,6 +103,10 @@ const MovieDetails = () => {
                       value={Math.round(MovieSection.vote_average)}
                       maxValue={10}
                       text={MovieSection.vote_average}
+                      styles={buildStyles({
+                        pathColor:
+                        MovieSection.vote_average < 5 ? "red" : MovieSection.vote_average < 7 ? "orange" : "green",
+                    })}
                     />
                   </div>
                 </span>
@@ -140,12 +144,12 @@ const MovieDetails = () => {
               <div className="heading">
                 <h1>Top Cast</h1>
               </div>
-              <ul className="ulll">
+              <div className="ulll">
                 {Creditinfo?.cast?.map((e) => {
                   return (
                     <div className="large">
                       <div className="second_inner_sections" key={e.id}>
-                        <span className="second_inner_section_img"><img src={`https://image.tmdb.org/t/p/original/${e.profile_path}`} alt="" /></span>
+                        <div className="second_inner_section_img"><img src={`https://image.tmdb.org/t/p/original/${e.profile_path}`} alt="" /></div>
                         <div className="name_details_info">
                           <p className="name_details_info_first">{e.name}</p>
                           <p className="name_details_info_second">{e.character}</p>
@@ -154,7 +158,7 @@ const MovieDetails = () => {
                     </div>
                   );
                 })}
-              </ul>
+              </div>
             </div>
           </div>
         </div>

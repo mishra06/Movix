@@ -37,7 +37,7 @@ const TrendingMovie = () => {
         <div style={{width:"90%" ,display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",gap:"1.5rem"}}>
         <div style={{color:"white",display:"flex",justifyContent:"space-between",width:"80%",marginTop:"5px"}}>
             <div><h2 style={{fontSize:"25px"}}>Trending</h2></div>
-            <div style={{display:"flex",width:"20%",border:"2px solid white",justifyContent:"space-between",borderRadius:"15px",padding:"2px",cursor:"pointer"}}>
+            <div className="toggle_div">
                 <button onClick={()=>{
                     setSwitchMovie("day")
                 }} style={{width:"50%",backgroundColor:"red",padding:"0px 20px", borderRadius:"15px"}}>Day</button>

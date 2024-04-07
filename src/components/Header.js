@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import './Header.css'
 import { useNavigate } from 'react-router-dom';
 
+
 const Header = () => {
 
+  
 
     const [search,setSearch] = useState("");
 
     const navigate = useNavigate()
-
     function SearchedData(){
         if(search !==""){
             navigate(`/search/${search}`);
@@ -17,6 +18,7 @@ const Header = () => {
     }
   return (
     <div className='header_upper'>
+      
       <div className='header_lower_sec'>
         <h1 className='text-8xl font-bold '>Welcome.</h1>
         <h4 className='text-xl font-bold'>Millions of movies, TV shows and people to discover. Explore now.</h4>

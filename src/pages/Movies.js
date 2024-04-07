@@ -215,10 +215,7 @@ const Movies = () => {
               <span>Explore Movies</span>
             </div>
             <div className="content_filter_section">
-              <div
-                style={{ width: "100%" }}
-                className="flex justify-center m-4"
-              >
+              <div className="two_option">
                 <Select
                   className="w-1/2"
                   value={selectedOption}

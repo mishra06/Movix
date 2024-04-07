@@ -13,7 +13,8 @@ const initialState = {
     Details:{},
     Credits:{},
     Similar :[],
-    Recomend:[]
+    Recomend:[],
+    Heros:[]
 };
 
 const movieSlice = createSlice({
@@ -59,10 +60,13 @@ const movieSlice = createSlice({
         },
         SetRecomend:(state,action)=>{
             state.Recomend = action.payload
+        },
+        SetHeros:(state,action)=>{
+            state.Heros = action.payload
         }
     },   
 });
 
-export const {Trending,Searched,MoviesSec,TvShows,Populars,TopRateds,SetGenres,SetSortBy,SetDetails,SetTvGenres,SetCredits,SetSimilar,SetRecomend} = movieSlice.actions;
+export const {Trending,Searched,MoviesSec,TvShows,Populars,TopRateds,SetGenres,SetSortBy,SetDetails,SetTvGenres,SetCredits,SetSimilar,SetRecomend,SetHeros} = movieSlice.actions;
 
 export default movieSlice.reducer; 
