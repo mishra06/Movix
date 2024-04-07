@@ -8,6 +8,7 @@ import Cards from "../components/Cards";
 import "./Movies.css";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Select from "react-select";
+import Shimmer from '../components/Shimmer'
 
 const Movies = () => {
   const [page, setPage] = useState(1);
@@ -193,6 +194,10 @@ const Movies = () => {
 
   // console.log(genres);
 
+  if(MovieSection.length===0){
+    return <Shimmer/>
+  }
+
   return (
     <div>
       <Navbar />
@@ -200,7 +205,7 @@ const Movies = () => {
         dataLength={total}
         next={moviesSectionPage}
         hasMore={true}
-        loader={<h4>Loading...</h4>}
+        loader={<Shimmer/>}
         endMessage={
           <p style={{ textAlign: "center" }}>
             <b>Yay! You have seen it all</b>

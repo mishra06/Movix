@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import Navbar from '../components/Navbar';
 import { NavLink } from 'react-router-dom';
 import CardSection from '../components/CardSection';
+import Shimmer from '../components/Shimmer';
+
 
 const TvShow = () => {
 
@@ -36,6 +38,10 @@ const TvShow = () => {
     })
 
     console.log(MovieSSections);
+
+    if(MovieSSections.length===0){
+      return <Shimmer/>
+    }
   return (
     <div>
       <Navbar/>

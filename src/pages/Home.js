@@ -11,6 +11,7 @@ const Home = () => {
       <Navbar />
       <Header />
       <Cardcollection/>
+      
     </div>
   );
 };
