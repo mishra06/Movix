@@ -8,11 +8,11 @@ import Cards from "../components/Cards";
 import "./Movies.css";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Select from "react-select";
-import Shimmer from '../components/Shimmer'
+
 
 const Movies = () => {
   const [page, setPage] = useState(1);
-  const [total, setTotal] = useState(2);
+  const [total, setTotal] = useState(5);
 
   const MovieSection = useSelector((state) => state.movieSlice.Movies);
   const genres = useSelector((state) => state.movieSlice.Genres);
@@ -131,7 +131,7 @@ const Movies = () => {
   }, []);
 
   const [selectedOption, setSelectedOption] = useState(null);
-  const [selectedSortOption,setSelectedSortOption] = useState(null);
+  // const [selectedSortOption,setSelectedSortOption] = useState(null);
 
   async function fetchFilteredMovie() {
     let params = "";
@@ -194,9 +194,7 @@ const Movies = () => {
 
   // console.log(genres);
 
-  if(MovieSection.length===0){
-    return <Shimmer/>
-  }
+  
 
   return (
     <div>
@@ -205,7 +203,7 @@ const Movies = () => {
         dataLength={total}
         next={moviesSectionPage}
         hasMore={true}
-        loader={<Shimmer/>}
+        loader={""}
         endMessage={
           <p style={{ textAlign: "center" }}>
             <b>Yay! You have seen it all</b>
@@ -219,7 +217,7 @@ const Movies = () => {
             <div className="content_name_sec">
               <span>Explore Movies</span>
             </div>
-            <div className="content_filter_section">
+            
               <div className="two_option">
                 <Select
                   className="w-1/2"
@@ -229,19 +227,8 @@ const Movies = () => {
                   }}
                   isMulti
                   options={genres}
-                />
-                <Select
-                  className="w-1/2"
-                  value={selectedSortOption}
-                  onChange={(e) => {
-                    setSelectedSortOption(e);
-                  }}
-                  isMulti
-                  options={"hhh"}
-                />
-                
+                /> 
               </div>
-            </div>
           </div>
 
           <div className="content_upper_sec">

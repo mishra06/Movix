@@ -10,9 +10,9 @@ const Cards = ({movie}) => {
           </div>
           <div className="conttent_img_info">
             <p className='conttent_name'>
-            {movie.original_title?.length >= 25 ? movie.original_title?.slice(0, 16) +" " + "..." : movie.original_title}
+            {movie.original_title?.length >= 25 ? movie.original_title?.slice(0, 16) +" " + "..." : movie.original_title || movie.name?.length >= 25 ? movie.name?.slice(0, 16) +" " + "..." : movie.name}
               </p>
-            <p className='conttent_date'>{movie.release_date}</p>
+            <p className='conttent_date'>{movie.release_date|| movie.first_air_date}</p>
           </div>
         </div>
   )

@@ -5,7 +5,7 @@ import { NavLink, useParams } from 'react-router-dom'
 import {fetchApi} from '../utils/api'
 import { Searched } from '../slice/movieSlice'
 import Cards from '../components/Cards'
-import Shimmer from '../components/Shimmer'
+
 
 const Search = () => {
 
@@ -44,9 +44,7 @@ const Search = () => {
 
   console.log("searchedMovie", searchedMovieList);
 
-  if(searchedMovieList.length===0){
-    return <Shimmer/>
-  }
+  
   return (
     <div style={{backgroundColor:"#04152d"}}>
       <Navbar/>

@@ -1,0 +1,57 @@
+.popular_heading > h2{
+    font-size: 25px;
+}
+
+.movie_btn{
+    width: 50%;
+    background-color: red;
+    padding: 0px 20px;
+    border-radius: 15px;
+}
+
+.tv_show_btn{
+    width: 50%;
+    padding: 0px 20px;
+    border-radius: 15px;
+    background-color: green;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 426px){
+    .popular_heading > h2{
+        font-size: 21px;
+    }
+    .movie_btn{
+        padding: 0px 0px;
+    }
+
+    .toggle_div{
+        width: 50%;
+    }
+    .tv_show_btn{
+        padding: 0px 0px;
+        width: 48%;
+    }
+
+    .text-8xl{
+        font-size: 5rem;
+    }
+    .text-xl{
+        text-align: center;
+        font-size: 1.15rem;
+    }
+    .header_serch_sec{
+        width: 75%;
+    }
+    .header_serch_sec > input{
+        font-size: 13px;
+        font-weight: 600;
+        /* width: 70%; */
+        border: 1px solid red;
+        height: 70%;
+    }
+    .header_serch_sec >button{
+        padding: 0px 0px;
+        height: 70%;
+    }
+}

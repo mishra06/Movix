@@ -5,6 +5,7 @@ import CardSection from "../components/CardSection";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import ReactSimplyCarousel from "react-simply-carousel";
+import './Popular.css'
 
 const Popular = () => {
         const [activeSlideIndex, setActiveSlideIndex] = useState(0);
@@ -37,14 +38,14 @@ const Popular = () => {
         <div style={{width:"100%",display:"flex",justifyContent:"center",alignItems:"center"}} className="">
             <div style={{width:"90%" ,display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",gap:"1.5rem"}}>
             <div style={{color:"white",display:"flex",justifyContent:"space-between",width:"80%",marginTop:"5px"}}>
-                <div><h2 style={{fontSize:"25px"}}>What's Popular</h2></div>
+                <div className="popular_heading"><h2>What's Popular</h2></div>
                 <div className="toggle_div">
-                    <button onClick={()=>{
+                    <button className="movie_btn" onClick={()=>{
                         setSwitchMovie("movie")
-                    }} style={{width:"50%",backgroundColor:"red",padding:"0px 20px", borderRadius:"15px"}}>Movies</button>
-                    <button onClick={()=>{
+                    }} >Movies</button>
+                    <button className="tv_show_btn" onClick={()=>{
                         setSwitchMovie("tv")
-                    }} style={{width:"50%",padding:"0px 20px", borderRadius:"15px",backgroundColor:"green",fontSize:"15px"}}>Tv-Show</button>
+                    }}>Tv-Show</button>
                 </div>
             </div>
           <ReactSimplyCarousel

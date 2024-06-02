@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Header.css'
 import { useNavigate } from 'react-router-dom';
+// import Wl from '../assets/poster.jpg'
 
 
 const Header = () => {

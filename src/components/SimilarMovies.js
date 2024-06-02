@@ -34,7 +34,10 @@ const SimilarMovies = () => {
     
       useEffect(() => {
         GetData();
-        console.log("test");
+        // console.log("test");
+        return(()=>{
+          SetSimilar([])
+        })
       }, [top]);
     
     
@@ -102,7 +105,7 @@ const SimilarMovies = () => {
                             
                           }}  key={movie.id}>
     
-                            <NavLink  to={`/movie/${movie.id}`}>
+                            <NavLink  to={`/similar/${movie.id}`}>
                                 <CardSection movie={movie} />
                             </NavLink>
                         </div>

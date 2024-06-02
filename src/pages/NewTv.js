@@ -8,7 +8,7 @@ import Cards from "../components/Cards";
 import "./Movies.css";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Select from "react-select";
-import Shimmer from "../components/Shimmer";
+
 
 const Movies = () => {
   const [page, setPage] = useState(1);
@@ -161,7 +161,7 @@ const Movies = () => {
         dataLength={total}
         next={moviesSectionPage}
         hasMore={true}
-        loader={<Shimmer/>}
+        loader={""}
         endMessage={
           <p style={{ textAlign: "center" }}>
             <b>Yay! You have seen it all</b>
@@ -175,10 +175,8 @@ const Movies = () => {
             <div className="content_name_sec">
               <span>Explore Tv</span>
             </div>
-            <div className="content_filter_section">
               <div
-                style={{ width: "100%" }}
-                className="flex justify-center m-4"
+                className="two_option"
               >
                 <Select
                   className="w-1/2"
@@ -189,17 +187,6 @@ const Movies = () => {
                   isMulti
                   options={genres}
                 />
-                <Select
-                  className="w-1/2"
-                  value={selectedSortOption}
-                  onChange={(e) => {
-                    setSelectedSortOption(e);
-                  }}
-                  isMulti
-                  options={"hhh"}
-                />
-                
-              </div>
             </div>
           </div>
 

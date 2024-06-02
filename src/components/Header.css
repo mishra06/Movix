@@ -12,16 +12,14 @@
     align-items: center;
     height: 90vh;
     width: 100%;
-    position: relative;
     background-color: #04152d;
-    color: white;
+    color: azure;
 }
 
 .down_banner{
-    position: absolute;
     width: 100%;
     height: 100%;
-    filter: blur(3px);
+   
 }
 
 .down_banner >img{
@@ -41,11 +39,12 @@
 .header_serch_sec{
     height: 3.5rem;
     width: 50%;
-    border: 1px solid black;
+    
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 25px;
+    color: #04152d;
 }
 
 .header_serch_sec > input,button{
