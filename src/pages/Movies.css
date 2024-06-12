@@ -51,7 +51,7 @@
     Helvetica
     Arial
     sans-serif;
-    color: white;
+    color: rgb(0, 0, 0);
 
 }
 
@@ -69,6 +69,7 @@
     font-size: 25px;
     font-weight: 600;
     width: 50%;
+    color: white;
 }
 
 .content_filter_section{
