@@ -11,7 +11,7 @@ const SimilarMovies = () => {
     const {id} = useParams()
 
         const [activeSlideIndex, setActiveSlideIndex] = useState(0);
-        const [top, setTop] = useState("movie");
+        // const [top, setTop] = useState("movie");
 
 
     
@@ -36,9 +36,9 @@ const SimilarMovies = () => {
         GetData();
         // console.log("test");
         return(()=>{
-          SetSimilar([])
+          dispatch(SetSimilar([]));
         })
-      }, [top]);
+      }, [id]);
     
     
       return (
@@ -105,7 +105,7 @@ const SimilarMovies = () => {
                             
                           }}  key={movie.id}>
     
-                            <NavLink  to={`/similar/${movie.id}`}>
+                            <NavLink  to={`/movie/${movie.id}`}>
                                 <CardSection movie={movie} />
                             </NavLink>
                         </div>

@@ -2,7 +2,7 @@ import React from 'react'
 
 
 
-const CardSection = ({movie }) => {
+const CardSection = ({movie}) => {
   
   return (
     

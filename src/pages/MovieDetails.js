@@ -39,7 +39,11 @@ const MovieDetails = () => {
 
   useEffect(() => {
     movieSection();
-  }, []);
+    return(()=>{
+      dispatch(SetDetails(null));
+      dispatch(SetCredits(null));
+    })
+  }, [id]);
 
   console.log("information", MovieSection);
 
